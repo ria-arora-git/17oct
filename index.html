@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fill this form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body align="center"> 
     
-    <h1> RECRUITMENT FORM </h1>
+<div class="form-container">
+    
 
     <form action="/submit" method="POST">
-
+        <h1> RECRUITMENT FORM </h1>
     <div>
     <label>Name :</label>
         <input type="text" name="name" required/> <br>
@@ -55,23 +57,23 @@
     <br>
 
     <div>
-        <label>Write about your past experience :</label> <br>
-            <textarea type="textarea" name="experience" rows="6" cols="40" placeholder= "Write about your experience here..." required></textarea> 
-        </div>
-        
+            <label>Write about your past experience :</label> <br>
+                <textarea type="textarea" name="experience" rows="6" cols="40" placeholder= "Write about your experience here..." required></textarea> 
+    </div>
+            
         <br>
     
     <div>
-    <label for="fileupload">Upload a photo of yours : <label><br>
-        <input type="file" id="fileupload" name="fileupload" accept=".png" required><br>
+       <label for="fileupload">Upload a photo of yours : <label><br>
+            <input type="file" id="fileupload" name="fileupload" accept=".png" required><br>
     </div>
 
-    <br>
+        <br>
 
-<button>Submit</button>
-<input type="reset" value="Reset">
+    <button>Submit</button>
+    <input type="reset" value="Reset">
 
-</form>
-
+    </form>
+</div>
 </body>
 </html>
