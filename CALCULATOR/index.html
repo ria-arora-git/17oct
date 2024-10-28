@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <p><span id="result"></span></p>
+        </div>
+        <div class="button2">
+            <button id="clear" onclick="clr()">C</button>
+            <button id="del" onclick="del()">DEL</button>
+        </div>
+        <div class="buttons">
+            
+            
+            <button id="seven" onclick="insert('7')">7</button>
+            <button id="eight" onclick="insert('8')">8</button>
+            <button id="nine" onclick="insert('9')">9</button>
+            <button id="div" onclick="insert('/')">/</button>
+            <button id="four" onclick="insert('4')">4</button>
+            <button id="five" onclick="insert('5')">5</button>
+            <button id="six" onclick="insert('6')">6</button>
+            <button id="mul" onclick="insert('*')">×</button>
+            <button id="one" onclick="insert('1')">1</button>
+            <button id="two" onclick="insert('2')">2</button>
+            <button id="three" onclick="insert('3')">3</button>
+            <button id="sub" onclick="insert('-')">-</button>
+            <button id="decimal" onclick="insert('.')">.</button>
+            <button id="zero" onclick="insert('0')">0</button>
+            <button id="calc" onclick="calc()">=</button>
+            <button id="add" onclick="insert('+')">+</button>
+        </div> 
+    </div>
+
+    <script>
+
+    function insert(num) {
+    const display = document.getElementById('result');
+    display.innerText += num;
+    }
+
+    function del() {
+    const display = document.getElementById('result');
+    display.innerText = display.innerText.slice(0, -1) || "0";
+    }
+
+    function add() {
+    const n1 = document.getElementById("num1").value;
+    const n2 = document.getElementById("num2").value;
+    const res = parseInt(n1) + parseInt(n2);
+    document.getElementById("result").innerText = res;
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    }
+
+    function subtract() {
+    const n1 = document.getElementById("num1").value;
+    const n2 = document.getElementById("num2").value;
+    const res = parseInt(n1) - parseInt(n2);
+    document.getElementById("result").innerText = res;
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    }
+
+    function multiply() {
+    const n1 = document.getElementById("num1").value;
+    const n2 = document.getElementById("num2").value;
+    const res = parseInt(n1) * parseInt(n2);
+    document.getElementById("result").innerText = res;
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    }
+
+    function divide() {
+    const n1 = document.getElementById("num1").value;
+    const n2 = document.getElementById("num2").value;
+    const res = parseInt(n1) / parseInt(n2);
+    document.getElementById("result").innerText = res;
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    }
+
+    function calc() {
+    const display = document.getElementById('result');
+    try {
+        const res = eval(display.innerText);
+        display.innerText = res;
+    } 
+    catch (error) {
+        display.innerText = "Error";
+    }
+    }
+
+    function clr() {
+    document.getElementById("result").innerText = "";
+    }
+
+
+    </script>
+
+</body>
+</html>
