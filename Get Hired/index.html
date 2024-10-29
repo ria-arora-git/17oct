@@ -7,26 +7,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css.css">
 </head>
-
 <body>
-    <div class="screen h-screen w-screen bg-orange-400">
-        <div class="screen1 w-1/2 h-full bg-white flex">
-            <div class="header w-screen h-12">
-                <div class="header1 flex justify-between items-center mx-5 my-2 text-xl" >
-                    <div class="flex">/hello@jobs</div>
-                    <div class="flex">Top Job  .  Resume  .  Events</div>
-                    
-        
+    <div class="screen h-screen w-screen bg-orange-500 flex relative">
+        <!-- Left Side -->
+        <div class="screen1 w-1/2 h-full bg-white flex flex-col">
+            <div class="header w-full h-10% flex justify-between items-center px-10 py-3.5 text-xl">
+                <div>/hello@jobs</div>
+                <div class="flex space-x-4">
+                    <span>Top Job</span>
+                    <span class="mx-2">.</span>
+                    <span>Resume</span>
+                    <span class="mx-2">.</span>
+                    <span>Events</span>
                 </div>
-        
             </div>
         </div>
-        <div class="screen2">
-        </div>
+
         
+
+        <!-- Right Side -->
+        <div class="screen2 w-1/2 h-full flex flex-col">
+            <div class="header2 flex justify-end items-center px-5 py-2.5 text-xl space-x-6">
+                <p>Log in</p>
+                <button class="bg-black text-white text-xs p-1.5 px-3">Join Now</button>
+                <img src="menulines.png" class="h-10" alt="Menu Icon">
+            </div>
+            <div class="flex flex-col justify-center items-center w-1/2 h-full"> <p class="hero text-black">_/ Get Hired</p> <h1 class="hero text-black text-4xl font-bold">The quickest way to Hire</h1> </div>
+            <div class="flex items-center justify-center h-3/4 w-3/4 m-20">
+                <img src="hired.png" class="h-full w-full object-contain" alt="Get Hired">
+            </div>
+            <div class="circlelogo absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+                <img src="circlelogo.png" class="h-40 w-40" alt="Circle Logo">
+            </div>
+            
+        </div>
     </div>
-
-    
 </body>
-
 </html>
