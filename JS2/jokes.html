@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[url('https://wallpapercave.com/wp/wp8552625.jpg')] h-screen w-full flex bg-slate-100 justify-center items-center ">
+    <header class="bg-black absolute top-0 w-full h-10 shadow-lg p-2 pl-4 font-semibold flex justify-center text-white">
+        MyJokesApp
+    </header>  
+    <div class="bg-[url('https://th.bing.com/th/id/OIP.BOu7pS7i8ipRV3gPS5F9fQHaE8?rs=1&pid=ImgDetMain')] bg-no-repeat bg-cover main  border-2 border-black shadow-lg rounded-lg p-4 flex flex-col justify-center items-center h-4/5 w-1/3 ">
+        <p id="jokeBox" class=" font-bold"></p>
+        <p id="punch" class="font-light"></p>
+        <button onclick="getJoke()" class=" border px-4 py-2 border-black mt-5 bg-black text-white rounded-lg">New Joke</button>
+    </div>
+    <footer class="absolute bottom-0 w-full h-10 bg-black p-2 pl-4 font-semibold flex items-center justify-center text-sm text-white">
+        Made by Ria Arora
+    </footer>
+
+
+    <script>
+        async function getJoke(){
+            const response = await fetch('https://official-joke-api.appspot.com/random_joke')
+            const data = await response.json()
+            console.log(data)
+            
+            
+            document.getElementById('jokeBox').innerText = data['setup']
+            document.getElementById('punch').innerText = data['punchline']
+        }
+    </script>
+</body>
+</html>
